@@ -16,22 +16,22 @@ lemmatizer = WordNetLemmatizer()
 nltk.download('omw-1.4')
 
 try:
-    model = load_model('/usercode/trained_model.h5')
+    model = load_model('trained_model.h5')
 except:
     print('can\'t find: trained_model.h5')
     sys.exit(0)
 try:
-    intents = json.loads(open('/usercode/intents.json').read())
+    intents = json.loads(open('intents.json').read())
 except:
     print('can\'t find: intents.json')
     sys.exit(0)
 try:
-    words = pickle.load(open('/usercode/words.pkl', 'rb'))
+    words = pickle.load(open('words.pkl', 'rb'))
 except:
     print('can\'t find: words.pkl')
     sys.exit(0)
 try:
-    classes = pickle.load(open('/usercode/classes.pkl', 'rb'))
+    classes = pickle.load(open('classes.pkl', 'rb'))
 except:
     print('can\'t find: classes.pkl')
     sys.exit(0)
